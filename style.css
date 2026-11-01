@@ -1,0 +1,39 @@
+/* 마따 사이트 (matda.kr: 소개, 지원, 개인정보 처리방침). 색은 앱 Theme.Colors와 같다. */
+:root {
+  --bg: #EEEEEF; --surface: #FFFFFF; --text: #101319; --muted: #4A4F5A; --line: #C3C6CB;
+  --accent: #F5BE3B; --accent-ink: #1E1A10; --link: #8A5F0F; --paper: #E8E4DD;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0D0F14; --surface: #1B202A; --text: #D8DADF; --muted: #868C97; --line: #2A303C; --link: #F5BE3B; --paper: #1B202A; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+main { max-width: 680px; margin: 0 auto; padding: 40px 20px 72px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+header img { width: 56px; height: 56px; border-radius: 13px; }
+header p { margin: 0; color: var(--muted); font-size: 14px; }
+header a { color: inherit; text-decoration: none; }
+h1 { font-size: 26px; line-height: 1.3; margin: 0; }
+h2 { font-size: 18px; margin: 32px 0 8px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); font-size: 14px; }
+a { color: var(--link); }
+.card { background: var(--surface); border-radius: 16px; padding: 18px 20px; margin: 16px 0; }
+.button { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 12px 20px; border-radius: 12px; }
+nav { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; display: flex; flex-wrap: wrap; gap: 16px; }
+
+/* 소개 (index.html) */
+.hero { text-align: center; padding: 56px 0 8px; }
+.hero img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); }
+.hero h1 { font-size: 40px; margin: 20px 0 4px; letter-spacing: -0.02em; }
+.hero .lead { font-size: 20px; line-height: 1.5; margin: 0 0 24px; }
+.hero .muted { margin-top: 14px; }
+.badge { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14px; color: var(--muted); }
+.pitch { font-size: 17px; margin: 40px 0 8px; }
+.shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 28px -20px; padding: 0 20px 8px; }
+.shots img { flex: 0 0 auto; width: min(62vw, 220px); height: auto; border-radius: 18px; background: var(--paper); scroll-snap-align: center; }
+.features { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 12px; }
+.features li { background: var(--surface); border-radius: 16px; padding: 16px 20px; }
+.features strong { display: block; font-size: 17px; margin-bottom: 2px; }
+.features span { color: var(--muted); }
